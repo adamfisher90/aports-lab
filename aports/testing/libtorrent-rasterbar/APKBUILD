@@ -2,7 +2,7 @@
 # Maintainer: August Klein <amatcoder@gmail.com>
 pkgname=libtorrent-rasterbar
 # Note: version 1.1.0 is not supported by deluge 1.3.12
-pkgver=1.0.9
+pkgver=0.16.18
 _pkgver=${pkgver%.0}
 _pkgver=${_pkgver//./_}
 pkgrel=2
@@ -14,7 +14,7 @@ depends=""
 depends_dev="boost-dev libressl-dev python2-dev"
 makedepends="$depends_dev linux-headers"
 subpackages="$pkgname-dev"
-source="https://github.com/arvidn/libtorrent/releases/download/libtorrent-$_pkgver/$pkgname-$pkgver.tar.gz"
+source="https://github.com/arvidn/libtorrent/archive/libtorrent-$_pkgver/$pkgname-$pkgver.tar.gz"
 
 builddir="$srcdir"/$pkgname-$pkgver
 
@@ -33,6 +33,7 @@ package() {
 	make DESTDIR="$pkgdir" install || return 1
 }
 
-md5sums="361c3d91a7c7447bb271b1775553a03b  libtorrent-rasterbar-1.0.9.tar.gz"
-sha256sums="11a93125ed49f796fca83da925ab7dc29e91d88b915f078caaddaaf559d63db6  libtorrent-rasterbar-1.0.9.tar.gz"
-sha512sums="68558d440c8220711a410e54a28316b7b98f6dd4d0dae2d56cee3a3f0bd031f8b0623a8eb3fde312c4d1b61b4be8fc21396cb3e9fd7f6d86e3a9a693ee036b66  libtorrent-rasterbar-1.0.9.tar.gz"
+
+md5sums="afedd0f60e287d24506ee2151de119cc  libtorrent-0_16_18.tar.gz"
+sha256sums="46c5a471e48f0f06eaf5c5c31f8e2f418bc5ecaf7913cbf365ec7a5a297e03eb libtorrent-0_16_18.tar.gz"
+sha512sums="697e859d7fa965d790cca5fb7ce257b4555c803779154fa95b72c9b32282839a9422d3e9be618acbc7f97cd5b59ce0214ae05f73df2f9aff4e68faf68b53420e libtorrent-0_16_18.tar.gz"
